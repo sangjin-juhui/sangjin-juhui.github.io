@@ -80,6 +80,11 @@
     </script>
   </head>
   <body class="text-center">
+    <span id="hus-father" style="display: none;">29802092100</span>
+    <span id="hus" style="display: none;">15810428001013</span>
+    <span id="wife-father" style="display: none;">3520137034673</span>
+    <span id="wife" style="display: none;">15810893201013</span>
+
     <div class="top-div">
       <header
         class="inner cover cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
@@ -360,7 +365,7 @@
                 <br />
                 <br />
                 <span class="section4-sec1">어머니</span>
-                &nbsp&nbsp&nbsp
+                
                 <span class="section4-sec2">김미경</span>
               </div>
               <div class="col-6 section4-sec1-2">
@@ -393,7 +398,7 @@
             data-toggle="modal"
             data-target="#groom"
           >
-            신랑 혼주 계좌번호 보기
+            신랑측 계좌번호 🌿
           </button>
           <!-- Modal -->
           <div
@@ -410,7 +415,7 @@
                     class="modal-title section7-modal section7-modal-title"
                     id="groomLabel"
                   >
-                    신랑 혼주 계좌번호 보기
+                    신랑측 계좌번호 🌿
                   </h5>
                   <button
                     type="button"
@@ -422,7 +427,21 @@
                   </button>
                 </div>
                 <div class="modal-body section7-modal section7-modal-content">
-                  신랑 혼주 : 농협 298-02-092100 오태경
+                  <b>신랑 혼주 계좌</b>
+                  
+                  &nbsp&nbsp&nbsp
+                  <a class="copy_btn" onclick="copyHusFather()">복사하기</a></div>
+               
+                <div class="modal-body section7-modal section7-modal-content">
+                  농협 298-02-092100 (오태경) 
+                </div>
+                <hr style="background-color:rgb(231, 231, 231); " width="60%">
+                <div class="modal-body section7-modal section7-modal-content">
+                  <b>신랑 계좌</b>  &nbsp&nbsp&nbsp&nbsp
+                  <a class="copy_btn" onclick="copyHus()">복사하기</a>
+                </div>
+                <div class="modal-body section7-modal section7-modal-content">
+                  기업 158-104280-01-013 (오상진)
                 </div>
                 <div class="modal-footer">
                   <button
@@ -443,7 +462,7 @@
             data-toggle="modal"
             data-target="#bride"
           >
-            신부 혼주 계좌번호 보기
+          신부측 계좌번호 🌿
           </button>
           <!-- Modal -->
           <div
@@ -460,7 +479,7 @@
                     class="modal-title section7-modal section7-modal-title"
                     id="brideLabel"
                   >
-                    신부 혼주 계좌번호 보기
+                  신부측 계좌번호 🌿
                   </h5>
                   <button
                     type="button"
@@ -472,7 +491,21 @@
                   </button>
                 </div>
                 <div class="modal-body section7-modal section7-modal-content">
-                  신부 혼주 : 농협 352-0137-0346-73 한기옥
+                  <b>신부 혼주 계좌</b>
+                  
+                  &nbsp&nbsp&nbsp
+                  <a class="copy_btn" onclick="copyWifeFather()">복사하기</a></div>
+               
+                <div class="modal-body section7-modal section7-modal-content">
+                  농협 352-0137-0346-73 (한기옥)
+                </div>
+                <hr style="background-color:rgb(231, 231, 231); " width="60%">
+                <div class="modal-body section7-modal section7-modal-content">
+                  <b>신부 계좌</b> &nbsp&nbsp&nbsp&nbsp
+                  <a class="copy_btn" onclick="copyWife()">복사하기</a>
+                </div>
+                <div class="modal-body section7-modal section7-modal-content">
+                  기업 158-108932-01-013 (한주희)
                 </div>
                 <div class="modal-footer">
                   <button
@@ -729,3 +762,34 @@
     ></script>
   </body>
 </html>
+
+<script>
+  function copyHusFather() {
+    var reference_element = document.querySelector('#hus-father').textContent;
+    copyClipboard(reference_element);
+  }
+
+  function copyHus() {
+    var reference_element = document.querySelector('#hus').textContent;
+    copyClipboard(reference_element);
+  }
+
+  function copyWifeFather() {
+    var reference_element = document.querySelector('#wife-father').textContent;
+    copyClipboard(reference_element);
+  }
+
+  function copyWife() {
+    var reference_element = document.querySelector('#wife').textContent;
+    copyClipboard(reference_element);
+  }
+
+  function copyClipboard(eleText) {
+    navigator.clipboard.writeText(eleText).then(() => {
+                    alert('계좌가 복사되었습니다');
+                  })
+                  .catch((err) => {
+                    console.log('링크복사 실패', err);
+                  });
+  }
+</script>
