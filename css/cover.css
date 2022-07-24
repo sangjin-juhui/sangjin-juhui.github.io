@@ -449,6 +449,12 @@ header {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   margin-bottom: 0.7em;
+  width: 80%;
+}
+
+.btn-bank {
+  justify-content: center;
+  align-items: center;
 }
 
 .section7-button:hover {
